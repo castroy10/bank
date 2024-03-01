@@ -1,0 +1,2 @@
+INSERT INTO public.appuser (id, last_name, first_name, middle_name, birthday, username, password, balance, first_balance, account_nonexpired, account_nonlocked, credentials_nonexpired, is_enabled) VALUES (1, 'Admin', 'Admin', 'Admin', '1977-01-01', 'admin', '$2a$10$.Mpu96rUydo9RvNv.LykQOg72KUFLpZuQkHoNZ.3SHKg5Q00jwbly', 1999.99, 1999.99, true, true, true, true) ON CONFLICT (id) DO NOTHING;
+SELECT setval('appuser_id_seq', nextval('appuser_id_seq'));
